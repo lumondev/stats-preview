@@ -90,12 +90,13 @@ img {
 @media (min-width: 900px) {
   .card {
     width: 1000px;
+    height: 450px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (500px)[2];
         grid-template-columns: repeat(2, 500px);
     text-align: left;
-    margin: 100px 0;
+    margin: 120px 0;
   }
   .card__image {
     -webkit-box-ordinal-group: 2;

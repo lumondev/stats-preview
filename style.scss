@@ -91,10 +91,11 @@ img {
 @media (min-width: 900px) {
   .card {
     width: 1000px;
+    height: 450px;
     display: grid;
     grid-template-columns: repeat(2, 500px);
     text-align: left;
-    margin: 100px 0;
+    margin: 120px 0;
 
     &__image {
       order: 1;
