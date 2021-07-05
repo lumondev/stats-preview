@@ -1,0 +1,134 @@
+:root {
+  --xDarkBlue: hsl(233, 47%, 7%);
+  --darkDesBlue: hsl(244, 38%, 16%);
+  --softViolet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --sTransparentWhite: hsla(0, 0%, 100%, 0.75);
+  --sTransparentWhiteH: hsla(0, 0%, 100%, 0.6);
+  --fontSize: 15px;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--xDarkBlue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  width: 375px;
+  color: #fff;
+  background-color: var(--darkDesBlue);
+  margin: 60px 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__image img {
+  -webkit-filter: sepia(1) saturate(3) contrast(0.7) brightness(0.5) hue-rotate(235deg);
+          filter: sepia(1) saturate(3) contrast(0.7) brightness(0.5) hue-rotate(235deg);
+}
+
+.card__text {
+  text-align: center;
+}
+
+.card__text h1 {
+  color: var(--white);
+  padding: 10px 40px;
+}
+
+.card__text h1 span {
+  color: var(--softViolet);
+}
+
+.card__text p {
+  color: var(--sTransparentWhite);
+  padding: 0 50px;
+  line-height: 30px;
+  font-family: "Inter", sans-serif;
+  padding-bottom: 20px;
+}
+
+.card__text-statistic {
+  padding: 30px 0;
+}
+
+.card__text-statistic .stat-item {
+  line-height: 10px;
+  padding-bottom: 30px;
+}
+
+.card__text-statistic .stat-item h2 {
+  font-family: "Inter", sans-serif;
+}
+
+.card__text-statistic .stat-item small {
+  color: var(--sTransparentWhiteH);
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: 1000px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (500px)[2];
+        grid-template-columns: repeat(2, 500px);
+    text-align: left;
+    margin: 100px 0;
+  }
+  .card__image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .card__image img {
+    width: 100%;
+    height: 100%;
+  }
+  .card__text {
+    text-align: left;
+  }
+  .card__text h1 {
+    padding: 50px;
+    padding-bottom: 20px;
+  }
+  .card__text p {
+    padding-left: 50px;
+  }
+  .card__text-statistic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-left: -20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
